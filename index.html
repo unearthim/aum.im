@@ -42,6 +42,79 @@
     
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- === 6. Schema.org JSON-LD === -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          // --- THE ARTWORK (Variable Content) ---
+          "@type": "VisualArtwork", 
+          "@id": "https://aum.im/#artwork",
+          "url": "https://aum.im",
+          "name": "Om (ॐ)",
+          "headline": "A digital space for meditation and reflection, centered on the primordial sound and symbol of Om (ॐ).",
+          "description": "An interactive digital monument for meditation and reflection, centered on the primordial sound and symbol of Om (ॐ). This project is part of the unearth.im collection.",
+          "image": "https://aum.im/og-image.png",
+          "artMedium": "Interactive Audio-Visual",
+          "artForm": "Digital Monument",
+          "genre": "Interactive Art",
+          "copyrightYear": "2025",
+          "inLanguage": "en-US",
+    
+          // --- THE CHAIN OF CUSTODY (Immutable Infrastructure) ---
+          "author": [
+            { "@id": "https://josiest.com/#person" },
+            { "@id": "https://felixvelas.co/#person" }
+          ],
+          "creator": [
+            { "@id": "https://josiest.com/#person" },
+            { "@id": "https://felixvelas.co/#person" }
+          ],
+          "publisher": { "@id": "https://unearth.im/#organization" },
+          "isPartOf": { "@id": "https://unearth.im/#collection" },
+          "mainEntityOfPage": { "@id": "https://aum.im/#website" }
+        },
+        {
+          // --- THE WEBSITE CONTAINER ---
+          "@type": "WebSite",
+          "@id": "https://aum.im/#website",
+          "url": "https://aum.im",
+          "name": "Digital Monument to Om (ॐ)",
+          "publisher": { "@id": "https://unearth.im/#organization" }
+        },
+        // --- THE SOVEREIGN ENTITIES (Immutable Core) ---
+        {
+          "@type": "Organization",
+          "@id": "https://unearth.im/#organization",
+          "name": "unearth.im",
+          "url": "https://unearth.im",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://unearth.im/favicon-32x32.png"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://josiest.com/#person",
+          "name": "Josie Jefferson",
+          "url": "https://josiest.com",
+          "jobTitle": "Digital Archaeologist",
+          "sameAs": [ "https://notjojo.im", "https://notjojo.org" ], 
+          "affiliation": { "@id": "https://unearth.im/#organization" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://felixvelas.co/#person",
+          "name": "Felix Velasco",
+          "url": "https://felixvelas.co",
+          "jobTitle": "Trust Architect",
+          "affiliation": { "@id": "https://unearth.im/#organization" }
+        }
+      ]
+    }
+    </script>
     
     <!-- Removed Tone.js script -->
     
